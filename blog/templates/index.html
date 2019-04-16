@@ -1,0 +1,14 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+{% block title %} My First Django Website {% endblock %}
+{% block headmessage %}
+{{ post.title }}
+{% endblock %}
+{% block content %}
+  <h3>關鍵字：
+  {% for keyword in post.keyword|slice:":-1" %}
+    {{ keyword }}、
+  {% endfor %}{{ post.keyword|last }}</h3>
+  {{ post.pub_date|date }}<br><br>
+  {{ post.body|safe }}
+{% endblock %}
