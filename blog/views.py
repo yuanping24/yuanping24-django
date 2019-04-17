@@ -40,3 +40,6 @@ def post_blog(request, slug):
     posts = BlogPost.objects.order_by('-pk')[:5]
     hotposts = BlogPost.objects.order_by('-readcount')[:5]
     return render(request, "post.html", locals())
+
+def google_site_veri(request):
+    return render(request, "google294c07ce6293992e.html")

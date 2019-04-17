@@ -24,4 +24,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("ckeditor/", include("ckeditor_uploader.urls")),
     path("blog/<slug:slug>/", blog.views.post_blog),
+    path("google294c07ce6293992e.html", blog.views.google_site_veri),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
