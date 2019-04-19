@@ -22,7 +22,7 @@
 </head>
 <body>
 {% include 'header.html' %} 
-<div class="container">
+<div class="container" style="padding-top:2.5rem;">
   <div class="row">
     <div class="col-sm-8">
       <h1>{% block headmessage %} {% endblock %}</h1>
@@ -34,7 +34,7 @@
         <a href="/blog/{{ nextpost.slug }}/" style="float:right"><h3>{{ nextpost.title }}<span class="glyphicon glyphicon-chevron-right"></span></h3></a>
       {% endif %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4"><br>
       <div class="panel panel-default">
         <div class="panel-heading">
           <h2>最近的文章</h2>
