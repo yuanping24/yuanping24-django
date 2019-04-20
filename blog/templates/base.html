@@ -27,12 +27,14 @@
     <div class="col-sm-8">
       <h1>{% block headmessage %} {% endblock %}</h1>
       <p>{% block content %} {% endblock %}</p>
-      {% if prepost %}
-        <a href="/blog/{{ prepost.slug }}/" style="text-align:left;width:50%;display:inline-block;"><h3><span class="glyphicon glyphicon-chevron-left"></span>{{ prepost.title }}</h3></a>
-      {% endif %}
-      {% if nextpost %}
-        <a href="/blog/{{ nextpost.slug }}/" style="text-align:right;width:50%;display:inline-block;"><h3>{{ nextpost.title }}<span class="glyphicon glyphicon-chevron-right"></span></h3></a>
-      {% endif %}
+      <div class="container col-sm-12">
+        {% if prepost %}
+          <a href="/blog/{{ prepost.slug }}/" style="float:left;"><h3><span class="glyphicon glyphicon-chevron-left"></span>{{ prepost.title }}</h3></a>
+        {% endif %}
+        {% if nextpost %}
+          <a href="/blog/{{ nextpost.slug }}/" style="float:right;"><h3>{{ nextpost.title }}<span class="glyphicon glyphicon-chevron-right"></span></h3></a>
+        {% endif %}
+      </div>
     </div>
     <div class="col-sm-4"><br>
       <div class="panel panel-default">
